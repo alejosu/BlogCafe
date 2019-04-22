@@ -19,10 +19,12 @@ body{
 .contenedor{
     max-width: 1200px;
     margin: 0 auto;
+    width: 95%;
 }
 
 h1,h2,h3,h4{
     font-family: 'PT Sans', sans-serif;
+    margin: 0;
 }
 
 h1 {
@@ -45,6 +47,14 @@ img{
     max-width: 100%;
 }
 
+a{
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    margin: 2.5rem 0;
+}
 
 /* utilidades */
 
@@ -55,6 +65,38 @@ img{
 .no-margin{
     margin: 0;
 }
+
+/* Botones */
+
+.btn{
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-black{
+    color: white;
+    background-color: black;
+}
+
+.btn-brown{
+    color: white;
+    background-color: #784D3C;
+}
+
+@media (min-width: 768px) {
+    .btn{
+        display: inline-block;
+    }
+}
+
 
 
 /* Header */
@@ -124,4 +166,82 @@ img{
 
 .texto-header p{
     font-size: 2.2rem;
+}
+
+/* contenido-principal Home*/
+
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog,.cursos{
+    flex: 0 0 100%;
+}
+
+.cursos{
+    order: -1;
+}
+
+@media (min-width: 768px){
+    .contenido-principal{
+        justify-content: space-between;
+    }
+
+    .blog{
+        flex-basis: 66.6%;
+    }
+
+    .cursos{
+        flex-basis: calc(33.3% - 4rem);
+        order: 2;
+    }
+}
+
+/* cursos barra*/
+
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+}
+
+.curso p{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.curso p span{
+    font-weight: 400;
+}
+
+/* Footer */
+
+.site-footer{
+    background-color: black;
+    min-height: 6rem;
+    padding: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.site-footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-footer a{
+    font-weight: 700;
+}
+
+.site-footer a p span{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-footer nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
